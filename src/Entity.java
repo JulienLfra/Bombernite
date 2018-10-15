@@ -3,9 +3,10 @@
 // Classe permettant de gerer les differents types d'objet sur la case
 // Version : 1.0.0
 
+import javax.swing.*;
 import java.awt.Color;
 
-public abstract class Entity {
+public abstract class Entity extends JLabel {
 
 	// Attribut ----------------------------------------------------------------------------------------
 	boolean crossable;
