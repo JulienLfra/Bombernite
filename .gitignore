@@ -1,0 +1,5 @@
+#bin et out sont des fichiers de build, a ne pas prendre en compte
+bin/
+out/
+.idea/
+bombernite.iml
