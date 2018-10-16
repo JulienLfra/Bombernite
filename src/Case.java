@@ -9,9 +9,8 @@ public class Case extends JPanel {
 
 	public Case(Coord coord) {
 		this.coord = coord;
-		this.entite = new Entite(Color.RED);
+		this.entite = new Entite();
 		this.setLayout(new BorderLayout());
 		this.add(entite);
-		
 	}
 }
