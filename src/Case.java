@@ -1,17 +1,19 @@
-import java.awt.BorderLayout;
-import java.awt.Color;
+import java.awt.*;
+import java.io.File;
 
-import javax.swing.JPanel;
+import javax.imageio.ImageIO;
+import javax.swing.*;
 
 public class Case extends JPanel {
 	private Coord coord;
-	private Entite entite;
+	private ImageIcon image;
 
-	public Case(Coord coord) {
+	public Case(Coord coord, ImageIcon image) {
 		this.coord = coord;
-		this.entite = new Entite(Color.RED);
+		this.image = image;
+		//Entity est abstract, constructeur d'une classe
+		// this.Entity = new Entity(Color.RED);
+		this.add(new JLabel(image));
 		this.setLayout(new BorderLayout());
-		this.add(entite);
-		
 	}
 }

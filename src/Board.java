@@ -1,14 +1,7 @@
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Graphics;
-import java.awt.GridLayout;
-import java.awt.Insets;
+import javax.swing.*;
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.swing.JPanel;
-import javax.swing.border.Border;
 
 public class Board extends JPanel {
 	private int width;
@@ -30,7 +23,7 @@ public class Board extends JPanel {
 		for (int width_temp = 0; width_temp < width; width_temp++) {
 			for (int length_temp = 0; length_temp < length; length_temp++) {
 				coord = new Coord(width_temp, length_temp);
-				square = new Case(coord);
+				square = new Case(coord, new ImageIcon("image.png"));
 				this.add(square);
 
 			}
