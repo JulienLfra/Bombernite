@@ -1,25 +1,34 @@
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Graphics;
-import java.awt.GridLayout;
-import java.awt.Insets;
+import javax.swing.*;
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.swing.JPanel;
-import javax.swing.border.Border;
 
 public class Board extends JPanel {
 	private int width;
 	private int length;
+	int tableau [][] ;
 	private Map<Coord, Case> map = new HashMap<Coord, Case>();
 
 	public Board(int width, int length) {
 		this.width = width;
 		this.length = length;
+		tableau[0][0]=0;
+		for(int i=1;i<10;i++) {
+			for (int j = 1; j < 10; j++) {
+				tableau[i][j] =1;
+			}
+		}
+		for(int i=0;i<10;i++) {
+			for (int j = 0; j < 10; j++) {
+				createEntity(i,j,tableau[i][j]);
+			}
+		}
 		this.createBoard();
 
+	}
+
+	private void createEntity(int x, int y, int typeEntity) {
+				Entite entite = new Entite(typeEntity);
 	}
 
 	private void createBoard() {
