@@ -5,13 +5,16 @@ import javax.swing.JPanel;
 
 public class Case extends JPanel {
 	private Coord coord;
-	private Entite entite;
+	private Entity entity;
 
 	public Case(Coord coord) {
 		this.coord = coord;
-		this.entite = new Entite(Color.RED);
+		this.entity = new Entity(coord);
 		this.setLayout(new BorderLayout());
-		this.add(entite);
-		
+		this.add(entity);
+	}
+
+	public Coord getCoord() {
+		return coord;
 	}
 }
