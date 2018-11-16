@@ -19,12 +19,7 @@ public class Launcher {
 		Board board = new Board(10,10);
 		frame.setVisible(true);		
 		frame.add(board);
-		
-		
-		
-		
-		
-
+	
 	}
 
 }

@@ -1,31 +1,15 @@
-import java.util.TimerTask;
-import java.util.Timer;
+// 16/11/2018 - Guillaume Bozon
+// Classe main qui permet de faire des tests divers
+// Version : 1.0.0
 
 public class MainTest {
 
-	static int k = 0;
-	
 	public static void main(String[] args) {
 		Bomb bomb1 = new Bomb();
 		System.out.println(bomb1.toString());
-		bomb1.die();
-		System.out.println(bomb1.toString());
 		
-		// EXEMPLE TIMER FONCTIONNEL -------------------------------------------------------------
-		TimerTask timerTask = new TimerTask(){
-			
-			@Override
-			public void run(){
-				test();
-			}
-		};
-		
-		Timer t = new Timer();
-		t.schedule(timerTask, 1000, 1000);
+		bomb1.bombPlaced();
 	}
-	
-	public static void test(){
-		k++;
-		System.out.println("k: " + k);
-	}
+
 }
+

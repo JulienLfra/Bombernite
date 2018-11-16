@@ -3,8 +3,5 @@
 // Version : 1.0.0
 
 public enum Direction {
-	NORTH,
-	SOUTH,
-	EAST,
-	WEST;
+	NORTH, SOUTH, EAST, WEST;
 }
